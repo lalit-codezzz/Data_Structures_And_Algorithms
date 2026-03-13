@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+void solve (int l, int r, int arr[]) {
+	int sum = 0;
+	for (int i = l-1; i < r; ++i) {
+		sum += arr[i];
+	}
+	cout << sum << "\n";
+}
+
 int main () {
 	int n = 0;
 	cin >> n;
@@ -11,11 +19,8 @@ int main () {
 	int q = 0;
 	cin >> q;
 	while (q--) {
-		int l = 0, r = 0, sum = 0;
+		int l = 0, r = 0;
 		cin >> l >> r;
-		for (int i = l-1; i < r; ++i) {
-			sum += arr[i];
-		}
-		cout << sum << "\n";
+		solve(l, r, arr);
 	}
 }
