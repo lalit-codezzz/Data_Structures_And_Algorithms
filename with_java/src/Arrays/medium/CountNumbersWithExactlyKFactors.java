@@ -4,20 +4,29 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class CountNumbersWithDigitSumK {
+public class CountNumbersWithExactlyKFactors {
 
-    public static int digitSum (int n) {
-        int dgSum = 0;
+    public static int findFactors (int n) {
+        if (n == 1) return 1;
 
-        while(n > 0) {
-            dgSum += (n % 10);
-            n /= 10;
+        int cnt = 2;
+
+        for (int i = 2; (i * i) <= n; ++i) {
+            if (n % i == 0) {
+
+                cnt++;
+
+                if ((n % (n / i) == 0) && (i != (n / i))) {
+                    cnt++;
+                }
+
+            }
         }
-
-        return dgSum;
+        return cnt;
     }
 
     public static void main(String[] args) throws Exception {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n, q, k;
         StringTokenizer stz1 = new StringTokenizer(br.readLine());
@@ -34,8 +43,8 @@ public class CountNumbersWithDigitSumK {
         int[] pSum = new int[n];
         int cnt = 0;
         for (int i = 0; i < n; ++i) {
-            int dgSum = digitSum(arr[i]);
-            if (dgSum == k) {
+            int factors = findFactors(arr[i]);
+            if (factors == k) {
                 cnt++;
             }
             pSum[i] = cnt;
@@ -48,7 +57,6 @@ public class CountNumbersWithDigitSumK {
             r = Integer.parseInt(stz3.nextToken());
             l--;
             r--;
-            // naiveSol(l-1, r, arr);
 
             if ((l) == 0) System.out.println(pSum[r]);
             else {
