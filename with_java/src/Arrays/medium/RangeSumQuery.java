@@ -17,6 +17,8 @@ public class RangeSumQuery {
         System.out.println(sum);
     }
 
+    // TC - O(n + q) ~ O(n)
+    // SC - O(n)
     public static long[] optimizedSol(int[] arr) {
         long[] pSum = new long[arr.length];
         int sum = 0;
