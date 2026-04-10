@@ -29,6 +29,8 @@ int main() {
 
     int arr[] = {45, 90, 300, 345, 678, 900, 1098, 4786, 8900, 10000};
 
+    // TC: O(log(n))
+    // SC: O(1)
     cout << binary_search_iterative(arr, n, 8900);
 
     return 0;

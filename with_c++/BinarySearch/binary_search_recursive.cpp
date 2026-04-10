@@ -26,6 +26,8 @@ int main() {
 
     int arr[] = {45, 90, 300, 345, 678, 900, 1098, 4786, 8900, 10000};
 
+    // TC: O(log(n))
+    // SC: O(log(n))
     cout << binary_search_recursive(arr, 0, n - 1, 900);
 
     return 0;
