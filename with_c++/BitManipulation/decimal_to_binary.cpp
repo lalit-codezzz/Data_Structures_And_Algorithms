@@ -1,21 +1,21 @@
 #include<iostream>
-#include<vector>
+#include<algorithm>
 using namespace std;
 
 string decimal_to_binary_str (int n) {
 
-    String ans = "";
+    string ans = "";
 
     while (n > 0) {
 
-        a += n / 2;
+        ans.append(std::to_string(n % 2));
 
         n /= 2;
 
     }
-
-    ans.reverse();
-
+    
+    std::reverse(ans.begin(), ans.end());
+    
     return ans;
 
 }
