@@ -129,6 +129,29 @@ void find_min_in_vector() {
     
 }
 
+void copy_vector1_to_vector2() {
+    int n = 0; 
+    vector<int> v1;
+    vector<int> v2;
+    
+    cin >> n;
+    
+    for (int i = 0; i < n; ++i) {
+        int val = 0;
+        cin >> val;
+        v1.push_back(val);
+    }
+    
+    v2 = v1;
+    
+    cout << "2nd vector output:" << "\n";
+    for (int i = 0; i < v2.size(); ++i) {
+        cout << v2[i] << " ";
+    }
+    
+    cout << "\n";
+    
+}
 int main() {
     
     // 1. Input and Print
@@ -144,5 +167,8 @@ int main() {
     // find_max_in_vector();
     
     // 5. Minimum Element
-    find_min_in_vector();
+    // find_min_in_vector();
+    
+    // 6. Copy Vector
+    copy_vector1_to_vector2();
 }
