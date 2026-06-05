@@ -152,6 +152,31 @@ void copy_vector1_to_vector2() {
     cout << "\n";
     
 }
+
+void remove_all_occurences_of_X_from_vector () {
+    int n = 0, x = 0; 
+    vector<int> v1;
+    
+    cin >> n >> x;
+    
+    for (int i = 0; i < n; ++i) {
+        int val = 0;
+        cin >> val;
+        v1.push_back(val);
+    }
+    
+    for (int i = 0; i < v1.size(); ++i) {
+        if (v1[i] == x) {
+            v1.erase(v1.begin() + i);
+        }
+    }
+    
+    for (int i = 0; i < v1.size(); ++i) {
+        cout << v1[i] << " ";
+    }
+    
+}
+
 int main() {
     
     // 1. Input and Print
@@ -170,5 +195,9 @@ int main() {
     // find_min_in_vector();
     
     // 6. Copy Vector
-    copy_vector1_to_vector2();
+    // copy_vector1_to_vector2();
+    
+    // 7. Remove All Occurrences
+    remove_all_occurences_of_X_from_vector();
+    
 }
