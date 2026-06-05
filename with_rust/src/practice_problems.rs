@@ -1,2 +1,3 @@
-pub mod user_input_1;
-pub mod reverse_an_array_2;
+pub mod user_input;
+pub mod reverse_an_array;
+pub mod maximum_element;

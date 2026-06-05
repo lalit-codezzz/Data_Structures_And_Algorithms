@@ -6,6 +6,9 @@ fn main() {
 
 
     // 2. Reversing an array
-    practice_problems::reverse_an_array_2::reverse_an_array::<5>();
+    // practice_problems::reverse_an_array::reverse_an_array::<5>();
+
+    //3. Maximum element in an array
+    practice_problems::maximum_element::maximum_element::<5>();
 
 }
