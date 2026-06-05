@@ -1,10 +1,4 @@
-use std::io;
-
+mod practice_problems;
 fn main() {
-    let mut input: String = String::new();
-
-    io::stdin().read_line(&mut input).expect("Error reading line!");
-
-    println!("{}", input);
-
+    practice_problems::user_input::take_user_input();    
 }

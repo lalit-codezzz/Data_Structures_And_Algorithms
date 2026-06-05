@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <climits>
 
 using namespace std;
 
@@ -82,6 +83,52 @@ void sum_of_elements_of_vector() {
     
 }
 
+void find_max_in_vector() {
+    int n = 0;
+    vector<int> v;
+    
+    cin >> n;
+    
+    for (int i = 0; i < n; ++i) {
+        int val = 0;
+        cin >> val;
+        v.push_back(val);
+    }
+    
+    int max = INT_MIN;
+    for (int i = 0; i < v.size(); ++i) {
+        if (max < v[i]) {
+            max = v[i];
+        }
+    }
+    
+    cout << "Maximum element: " << max << "\n";
+    
+}
+
+void find_min_in_vector() {
+    int n = 0;
+    vector<int> v;
+    
+    cin >> n;
+    
+    for (int i = 0; i < n; ++i) {
+        int val = 0;
+        cin >> val;
+        v.push_back(val);
+    }
+    
+    int min = INT_MAX;
+    for (int i = 0; i < v.size(); ++i) {
+        if (min > v[i]) {
+            min = v[i];
+        }
+    }
+    
+    cout << "Minimum element: " << min << "\n";
+    
+}
+
 int main() {
     
     // 1. Input and Print
@@ -92,4 +139,10 @@ int main() {
     
     // 3. Sum of Elements
     // sum_of_elements_of_vector();
+    
+    // 4. Maximum Element
+    // find_max_in_vector();
+    
+    // 5. Minimum Element
+    find_min_in_vector();
 }
