@@ -1,4 +1,5 @@
-mod practice_problems;
+// mod syntax_comfort;
+mod recursion;
 fn main() {
 
     // 1. Taking user input
@@ -9,6 +10,13 @@ fn main() {
     // practice_problems::reverse_an_array::reverse_an_array::<5>();
 
     //3. Maximum element in an array
-    practice_problems::maximum_element::maximum_element::<5>();
+    // syntax_comfort::maximum_element::maximum_element::<5>();
 
+    //4. Factorial of n
+    // let f: i32 = recursion::factorial::fact(5);
+    // print!("Factorial of 5 is: {}", f);
+
+    //5. Fibonacci on n
+    let f: i32 = recursion::fibonacci::fib(3);
+    print!("Fibonacci of N is: {}", f);
 }
